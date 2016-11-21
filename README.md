@@ -7,4 +7,4 @@ Tres ejemplos.
 3) spring2InjdeObjetos. Clase persona con injeccion de Objetos
 
 Ejemplos de Publish-suscribe ActiveMQ
-1)ActiveMQEjemplo3 
+1)ClienteAdministradorPS
