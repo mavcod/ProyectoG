@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="persona" class="com.mitocode.beans.Persona">
+	<property name="pais">
+	
+		<bean id="pais" class="com.mitocode.beans.Pais">
+			<property name="nombre" value="Colombia"></property>
+			<property name="ciudad" >
+				<bean id="ciudad" class="com.mitocode.beans.Ciudad">
+					<property name="nombre" value="Bucaramanga"></property>
+				</bean>
+			</property>
+	
+		</bean>
+	</property>
+	<property name="id" value="1"></property>
+	<property name="nombre" value="Manuel"></property>
+	<property name="apodo" value="Villa"></property>
+</bean>
+
+
+
+
+
+</beans>
