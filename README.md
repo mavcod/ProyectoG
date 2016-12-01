@@ -8,3 +8,12 @@ Ejemplos de injection dependency con spring tipo maven
 
 #Ejemplos de Publish-suscribe ActiveMQ
 * ClienteAdministradorPS
+
+
+#Ejemplo google GUICE
+
+* com.org.EjemploGuice. Ejemplo que injecta el nombre y el mensaje  e imprime un mensaje con esa información.
+
+#Ejemplo google EventBus
+
+* com.org.EjemploEventBus. Ejemplo que de publis and suscribe con anotaciones.
