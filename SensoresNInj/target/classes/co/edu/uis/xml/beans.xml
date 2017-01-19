@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="armarmensaje" class="co.edu.uis.beans.ArmarMensajeImpl" />
+
+	<bean id="enviarMensaje" class="co.edu.uis.beans.EnviarMensajeImpl">
+		<constructor-arg name="mensajeobtenido" ref="armarmensaje">
+		</constructor-arg>
+	</bean>
+	<bean id="sensor1" class="co.edu.uis.beans.Sensor1Impl">
+		<constructor-arg value="1"></constructor-arg>
+		<property name="id" value="1"></property>
+		<constructor-arg name="mensaje" ref="armarmensaje">
+		</constructor-arg>
+	</bean>
+
+	<bean id="sensor2" class="co.edu.uis.beans.Sensor2Impl">
+		<constructor-arg value="2"></constructor-arg>
+		<property name="id" value="2"></property>
+		<constructor-arg name="mensaje" ref="armarmensaje">
+		</constructor-arg>
+	</bean>
+
+	<bean id="pertinencia" class="co.edu.uis.beans.PertinenciaMensajeImpl">
+		<constructor-arg name="mensajeobtenido" ref="armarmensaje">
+		</constructor-arg>
+	</bean>
+</beans>
