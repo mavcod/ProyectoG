@@ -17,3 +17,15 @@ Ejemplos de injection dependency con spring tipo maven
 #Ejemplo google EventBus
 
 * com.org.EjemploEventBus. Ejemplo que de publis and suscribe con anotaciones.
+
+#Sensores 
+
+* SensoresN
+
+#Sensores con Spring
+
+* SensoresNInj
+
+#Sensores con GUICE
+
+* co.edu.uis.SensoresNGuice
