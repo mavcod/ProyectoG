@@ -28,7 +28,7 @@ Ejemplos de injection dependency con spring tipo maven
 
 #Sensores con GUICE
 
-* co.edu.uis.SensoresNGuice
+* SensoresGuice utiliza guice para hacer los injectores
 
 #Sensores con EventBus
 
