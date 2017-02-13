@@ -32,4 +32,4 @@ Ejemplos de injection dependency con spring tipo maven
 
 #Sensores con EventBus
 
-*SensoresEventBus. Actualmente funciona correctamente, el problema que presenta es que al utilizar la clase enviarmensaje nunca ve la información.
+*SensoresEventBusF. Tiene asociado P/S utilizando Guava EventBus.
