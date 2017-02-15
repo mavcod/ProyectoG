@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:eventbus="http://sargis.info/eventbus"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://sargis.info/eventbus http://sargis.info/eventbus/eventbus-spring-1.0.xsd">
+
+    
+    <bean id="eventBus" class="com.google.common.eventbus.EventBus"/>
+    
+	<bean id="armarmensaje" class="co.edu.uis.beans.ArmarMensajeImpl" />
+
+	<bean id="enviarMensaje" class="co.edu.uis.beans.EnviarMensajeImpl">
+		<constructor-arg name="mensajeobtenido" ref="armarmensaje">
+		</constructor-arg>
+	</bean>
+	<bean id="sensor1" class="co.edu.uis.beans.SensorTemperaturaImpl">
+		<constructor-arg value="1"></constructor-arg>
+		<constructor-arg name="mensaje" ref="armarmensaje">
+		</constructor-arg>
+		<constructor-arg name="evento" ref="eventBus">
+		</constructor-arg>
+	</bean>
+
+	<bean id="sensor2" class="co.edu.uis.beans.SensorPresionImpl">
+		<constructor-arg value="2"></constructor-arg>
+		<constructor-arg name="mensaje" ref="armarmensaje">
+		</constructor-arg>
+		<constructor-arg name="evento" ref="eventBus">
+		</constructor-arg>
+	</bean>
+
+	<bean id="pertinencia" class="co.edu.uis.beans.PersistenciaMensajeImpl">
+		<constructor-arg name="mensajeobtenido" ref="armarmensaje">
+		</constructor-arg>
+	</bean>
+</beans>
